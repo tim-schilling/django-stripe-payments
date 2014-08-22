@@ -38,7 +38,7 @@ An event is a webhook message sent from Stripe to the webhook url you set up.
 
 The message is captured in a view, saved to the model. It is then validated and
 processed. Processing only occurs if the messages is indeed validated. It's only
-valid if the event content pulled by id from Stripe matches what was received
+valid if the event content pulled by it from Stripe matches what was received
 at the webhook endpoint. This is designed to prevent people from discovering
 your endpoint url and posting fake data to it.
 
@@ -88,7 +88,7 @@ The `Customer` object maps to a customer record in Stripe and has a nullable
 foriegn key to a `User` object. It's nullable because you maybe delete a user
 from your site but would likely want/need to keep financial record history.
 
-There are lots of public API methods on `Customer` intances that are likely of
+There are lots of public API methods on `Customer` instances that are likely of
 some interest.
 
 `purge()`
